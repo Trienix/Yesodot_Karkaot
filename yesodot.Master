@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="yesodot.master.cs" Inherits="yesodot.yesodot" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #BDB5D5;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #D45969;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: right;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+<
+</style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body style="background-color:#E6E6FA">
+    <form id="form1" runat="server">
+        
+<div class="navbar">
+  <a href="Home.aspx">דף ראשי</a>
+  <div class="dropdown">
+    <button class="dropbtn">יסודות
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="YesodBoded.aspx">יסוד בודד / פלטת בטון</a>
+      <a href="YesodOver.aspx">יסוד עובר</a>
+      <a href="Rafsoda.aspx">רפסודה</a>
+      <a href="Klonas.aspx">כלונס / כלונסאות</a>
+    </div>
+  </div> 
+    <div class="dropdown">
+    <button class="dropbtn">קרקעות
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="KarkaYezhiva.aspx">קרקע יציבה</a>
+      <a href="KarkaOvedet.aspx">קרקע "עובדת"</a>
+      
+    </div>
+  </div> 
+</div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+                
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
